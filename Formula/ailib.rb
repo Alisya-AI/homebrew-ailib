@@ -11,7 +11,7 @@ class Ailib < Formula
 
   def install
     system "npm", "install", "--omit=dev", *std_npm_args
-    bin.install_symlink libexec/"bin/ailib"
+    bin.install libexec/"lib/node_modules/@alisya.ai/ailib/bin/ailib.js" => "ailib"
   end
 
   test do
